@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Grabar Programación</title>
+</head>
+<body>
+    <h1>Grabar programación horario</h1>
+
+    <form th:action="@{/grabar}" th:object="${prog}" method="post">
+
+        <label>Fecha de Atención</label>
+        <input type="date" th:field="*{fechaAtencion}"/>
+
+        <label>Hora de Inicio</label>
+        <input type="time" th:field="*{horaInicio}"/>
+
+        <label>Hora de Fin</label>
+        <input type="time" th:field="*{horaFin}"/>
+
+        <button type="submit">Grabar</button>
+
+    </form>
+</body>
+</html>
