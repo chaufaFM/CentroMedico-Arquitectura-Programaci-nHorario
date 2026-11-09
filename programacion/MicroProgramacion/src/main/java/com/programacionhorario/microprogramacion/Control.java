@@ -17,6 +17,11 @@ public class Control {
         s.grabar(prog);
     }
 
+    @GetMapping("/buscar/{id}")
+    public Programacion buscar(@PathVariable Long id){
+        return s.buscar(id);
+    }
+
     @GetMapping("/listar")
     public List<Programacion>listar(){
         return s.listar();

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultar Programación</title>
+</head>
+<body>
+    <h1>Consultar Programación de Horario</h1>
+    <div th:if="${prog != null}">
+        <table border="1">
+            <tr>
+                <td>ID</td>
+                <td th:text="${prog.id}"></td>
+            </tr>
+            <tr>
+                <td>Fecha de Atención</td>
+                <td th:text="${prog.fechaAtencion}"></td>
+            </tr>
+            <tr>
+                <td>Hora de Inicio</td>
+                <td th:text="${prog.horaInicio}"></td>
+            </tr>
+            <tr>
+                <td>Hora de Fin</td>
+                <td th:text="${prog.horaFin}"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div th:if="${msg != null}">
+        <p th:text="${msg}"></p>
+    </div>
+
+    <br>
+    <a th:href="@{/verBuscar}">Volver a buscar</a>
+</body>
+</html>

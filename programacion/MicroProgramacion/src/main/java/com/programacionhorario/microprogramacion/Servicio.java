@@ -14,6 +14,10 @@ public class Servicio {
         r.save(prog);
     }
 
+    public Programacion buscar(Long id){
+        return r.findById(id).orElse(null);
+    }
+
     public List<Programacion>listar(){
         return r.findAll();
     }

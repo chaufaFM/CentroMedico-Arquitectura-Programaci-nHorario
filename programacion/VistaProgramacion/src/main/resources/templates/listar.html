@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Listar Programaciones</title>
 </head>
 <body>
     <h1>Listar Programaciones de Horario</h1>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Fecha de Atención</th>
+            <th>Hora de Inicio</th>
+            <th>Hora de Fin</th>
+        </tr>
+
+        <tr th:each="prog : ${progs}">
+            <td th:text = "${prog.id}"></td>
+            <td th:text = "${prog.fechaAtencion}"></td>
+            <td th:text = "${prog.horaInicio}"></td>
+            <td th:text = "${prog.horaFin}"></td>
+        </tr>
+    </table>
+
+    <p th:if = "${#lists.isEmpty(progs)}">
+        No existe programaciones registradas.
+    </p>
+    <br>
+    <a th:href="@{/verGrabar}">Registrar Programación</a>
+    <br>
+    <a th:href="@{/verBuscar}">Buscar Programación</a>
 
 </body>
 </html>

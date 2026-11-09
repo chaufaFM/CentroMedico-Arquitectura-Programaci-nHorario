@@ -85,7 +85,8 @@ cd medico/MicroMedico
 - Mostrar el formulario de registro de programación.
 - Capturar la fecha de atención y las horas de inicio y fin.
 - Enviar los datos al microservicio mediante RestTemplate.
-- Disponer de una página inicial para el listado de programaciones.
+- Mostrar el listado de programaciones registradas.
+- Buscar una programación por ID y mostrar sus datos o un mensaje si no existe.
 
 ## Endpoints REST
 
@@ -93,6 +94,7 @@ cd medico/MicroMedico
 |---|---|---|
 | POST | /programacion/grabar | Registrar una programación de horario. |
 | GET | /programacion/listar | Consultar las programaciones registradas. |
+| GET | /programacion/buscar/{id} | Consultar una programación por ID. |
 
 ### Ejemplo de solicitud POST
 
@@ -179,10 +181,10 @@ La aplicación web estará disponible en:
 - Aplicación web desarrollada con Thymeleaf.
 - Comunicación entre frontend y backend.
 - Formulario web de registro de programación.
+- Listado web y búsqueda de programaciones por ID.
 
 ### Funcionalidades pendientes
 
-- Completar la visualización del listado en la interfaz web.
 - Implementar los demás módulos del proceso de programación.
 - Integrar los servicios adicionales definidos en la arquitectura del sistema.
 

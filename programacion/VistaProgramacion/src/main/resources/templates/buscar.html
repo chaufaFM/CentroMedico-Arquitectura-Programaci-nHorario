@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar Programación</title>
+</head>
+<body>
+
+    <h1>Buscar Programación de Horario</h1>
+
+    <form th:action = "@{buscar}" method="post">
+
+        <label>Ingrese ID de programación:</label>
+        <input type="number" name="id" min="1" required>
+        <button type="submit">Buscar</button>
+    </form>
+    <br>
+    <a th:href="@{/verGrabar}">Registrar Programación</a>
+    <br>
+    <a th:href="@{/verListar}">Listar Programación</a>
+
+</body>
+</html>
