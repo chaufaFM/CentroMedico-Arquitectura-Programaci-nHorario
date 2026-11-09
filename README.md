@@ -11,7 +11,7 @@ El proyecto utiliza una arquitectura basada en aplicaciones independientes que s
 
 ## Arquitectura del sistema
 
-Actualmente, el sistema está compuesto por dos aplicaciones Spring Boot:
+El servicio de programación está compuesto por dos aplicaciones Spring Boot:
 
 | Aplicación | Descripción | Puerto |
 |---|---|---|
@@ -53,11 +53,22 @@ Los proyectos se agrupan por servicio, conservando sus nombres originales.
 
 ```text
 CentroMedico/
+├── medico/
+│   └── MicroMedico/
 ├── programacion/
 │   ├── MicroProgramacion/
 │   └── VistaProgramacion/
 ├── .gitignore
 └── README.md
+```
+
+El servicio de médicos se encuentra en `medico/MicroMedico`. Por ahora contiene únicamente el proyecto base Spring Boot, sin endpoints de negocio ni aplicación `VistaMedico`. Conserva su configuración original y utiliza el puerto predeterminado 8080.
+
+Para abrirlo en IntelliJ, importa `medico/MicroMedico/pom.xml` como proyecto Maven. Para iniciarlo desde PowerShell:
+
+```powershell
+cd medico/MicroMedico
+.\mvnw.cmd spring-boot:run
 ```
 
 ## Funcionalidades implementadas
