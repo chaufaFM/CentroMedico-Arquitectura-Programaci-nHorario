@@ -49,26 +49,15 @@ Base de datos H2
 
 ## Estructura del repositorio
 
+Los proyectos se agrupan por servicio, conservando sus nombres originales.
+
 ```text
-CentroMédico-Arquitectura-ProgramaciónHorario/
-|
-|-- backend/
-|   |-- MicroProgramacion/
-|       |-- src/
-|       |-- pom.xml
-|       |-- mvnw
-|       |-- mvnw.cmd
-|
-|-- frontend/
-|   |-- VistaProgramacion/
-|       |-- src/
-|       |-- pom.xml
-|       |-- mvnw
-|       |-- mvnw.cmd
-|
-|-- docs/
-|-- .gitignore
-|-- README.md
+CentroMedico/
+├── programacion/
+│   ├── MicroProgramacion/
+│   └── VistaProgramacion/
+├── .gitignore
+└── README.md
 ```
 
 ## Funcionalidades implementadas
@@ -135,7 +124,7 @@ git clone URL_DEL_REPOSITORIO
 
 Abrir el proyecto:
 
-`backend/MicroProgramacion`
+`programacion/MicroProgramacion`
 
 Ejecutar la clase:
 
@@ -149,7 +138,7 @@ El microservicio estará disponible en:
 
 Abrir el proyecto:
 
-`frontend/VistaProgramacion`
+`programacion/VistaProgramacion`
 
 Ejecutar la clase:
 
