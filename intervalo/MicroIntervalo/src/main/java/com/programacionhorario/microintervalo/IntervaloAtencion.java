@@ -13,16 +13,16 @@ public class IntervaloAtencion {
     @GeneratedValue
     private Long id;
     private Long idProgramacion;
-    private LocalTime horarioIncio;
+    private LocalTime horarioInicio;
     private LocalTime horarioFin;
     private String estado;
 
     public IntervaloAtencion() {
     }
 
-    public IntervaloAtencion(Long idProgramacion, LocalTime horarioIncio, LocalTime horarioFin, String estado) {
+    public IntervaloAtencion(Long idProgramacion, LocalTime horarioInicio, LocalTime horarioFin, String estado) {
         this.idProgramacion = idProgramacion;
-        this.horarioIncio = horarioIncio;
+        this.horarioInicio = horarioInicio;
         this.horarioFin = horarioFin;
         this.estado = estado;
     }
@@ -43,12 +43,12 @@ public class IntervaloAtencion {
         this.idProgramacion = idProgramacion;
     }
 
-    public LocalTime getHorarioIncio() {
-        return horarioIncio;
+    public LocalTime getHorarioInicio() {
+        return horarioInicio;
     }
 
-    public void setHorarioIncio(LocalTime horarioIncio) {
-        this.horarioIncio = horarioIncio;
+    public void setHorarioInicio(LocalTime horarioInicio) {
+        this.horarioInicio = horarioInicio;
     }
 
     public LocalTime getHorarioFin() {

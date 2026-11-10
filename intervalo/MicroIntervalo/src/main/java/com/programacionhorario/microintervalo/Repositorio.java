@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface Repositorio extends JpaRepository<IntervaloAtencion, Long> {
 
-    List<IntervaloAtencion> findbyIdProgramacion(Long idProgramacion);
+    List<IntervaloAtencion> findByIdProgramacion(Long idProgramacion);;
 }
