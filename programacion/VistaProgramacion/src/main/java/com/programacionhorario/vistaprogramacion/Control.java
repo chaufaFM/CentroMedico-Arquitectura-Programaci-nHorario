@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.client.HttpClientErrorException;
 
 @Controller
 public class Control {
@@ -19,9 +20,16 @@ public class Control {
     }
 
     @PostMapping("/grabar")
-    public String grabar (Programacion prog){
-        s.grabar(prog);
-        return "redirect:/verGrabar?success";
+    public String grabar (Programacion prog, Model m){
+        try {
+            s.grabar(prog);
+            return "redirect:/verGrabar?success";
+        } catch (HttpClientErrorException.BadRequest e) {
+            m.addAttribute("prog", prog);
+            m.addAttribute("error",
+                    "El horario debe permitir intervalos completos de 20 minutos.");
+            return "grabar";
+        }
     }
 
     @GetMapping("/verListar")

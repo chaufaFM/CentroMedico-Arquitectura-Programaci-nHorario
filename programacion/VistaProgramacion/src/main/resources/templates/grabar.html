@@ -21,6 +21,12 @@
         <button type="submit">Grabar</button>
 
     </form>
+
+    <!-- Mensaje cuando el horario es inválido -->
+    <div th:if="${error}" style="color: red;">
+        <p th:text="${error}"></p>
+    </div>
+
     <br>
     <a th:href="@{/verListar}">Listar programaciones</a>
     <br>
