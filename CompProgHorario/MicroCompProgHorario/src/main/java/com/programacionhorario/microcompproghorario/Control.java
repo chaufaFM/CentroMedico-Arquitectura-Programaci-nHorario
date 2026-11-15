@@ -1,10 +1,9 @@
 package com.programacionhorario.microcompproghorario;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/programacionhorario")
@@ -18,4 +17,13 @@ public class Control {
         return servicio.generarHorario(ent);
     }
 
+    @GetMapping("/buscar/{id}")
+    public Salida buscarHorario(@PathVariable Long id) {
+        return servicio.buscarHorario(id);
+    }
+
+    @GetMapping("/listar")
+    public List<Salida> listarHorarios() {
+        return servicio.listarHorarios();
+    }
 }
