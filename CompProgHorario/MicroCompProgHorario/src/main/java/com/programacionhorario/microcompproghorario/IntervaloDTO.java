@@ -6,17 +6,21 @@ public class IntervaloDTO {
 
     private Long id;
     private Long idProgramacion;
-    private LocalTime horaInicio;
-    private LocalTime horaFin;
+    private LocalTime horarioInicio;
+    private LocalTime horarioFin;
+    private String estado;
 
     public IntervaloDTO() {
     }
 
-    public IntervaloDTO(Long id, Long idProgramacion, LocalTime horaInicio, LocalTime horaFin) {
+    public IntervaloDTO(Long id, Long idProgramacion,
+                        LocalTime horarioInicio, LocalTime horarioFin,
+                        String estado) {
         this.id = id;
         this.idProgramacion = idProgramacion;
-        this.horaInicio = horaInicio;
-        this.horaFin = horaFin;
+        this.horarioInicio = horarioInicio;
+        this.horarioFin = horarioFin;
+        this.estado = estado;
     }
 
     public Long getId() {
@@ -35,19 +39,27 @@ public class IntervaloDTO {
         this.idProgramacion = idProgramacion;
     }
 
-    public LocalTime getHoraInicio() {
-        return horaInicio;
+    public LocalTime getHorarioInicio() {
+        return horarioInicio;
     }
 
-    public void setHoraInicio(LocalTime horaInicio) {
-        this.horaInicio = horaInicio;
+    public void setHorarioInicio(LocalTime horarioInicio) {
+        this.horarioInicio = horarioInicio;
     }
 
-    public LocalTime getHoraFin() {
-        return horaFin;
+    public LocalTime getHorarioFin() {
+        return horarioFin;
     }
 
-    public void setHoraFin(LocalTime horaFin) {
-        this.horaFin = horaFin;
+    public void setHorarioFin(LocalTime horarioFin) {
+        this.horarioFin = horarioFin;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 }
